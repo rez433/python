@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8" />
+		<title>Redovisning av kursmoment | python</title>
+		<style>
+			pre {
+				width: 100%;
+				padding-left: 0.5rem;
+				margin: 0;
+				overflow: auto;
+				overflow-y: hidden;
+				font-size: 1rem;
+				line-height: 1.2rem;
+				border: 1px dashed #777;
+				background: url(lines.png) repeat 0 0;
+			}
+		</style>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<nav>
+			<a href="me.html">Me</a> | <a href="redovisning.html">Redovisning</a> |
+			<a href="om.html">Om</a>
+		</nav>
+
+		<article class="redovisning">
+			<header>
+				<h1>Redovisning av kursmoment</h1>
+				<p>
+					Detta är redovisningssidan för kursen, här finns samtliga
+					redovisningstexter.
+				</p>
+			</header>
+
+			<!-- Redovisningstext för kmom -->
+			<section>
+				<h2>Kmom01</h2>
+				<h3>Frågor:</h3>
+				<ol>
+					<li>Vad är en variabel?</li>
+					<li>Vilken utvecklingsmiljö använder du?</li>
+					<li>
+						Är du bekant med programmering och problemlösning och/eller Python
+						sedan tidigare?
+					</li>
+					<li>
+						Är du bekant med terminalen och Unix-kommandon sedan tidigare?
+					</li>
+					<li>
+						Gick det bra att komma i gång med kursmomentet, fanns det
+						svårigheter som du fastnade på?
+					</li>
+					<li>
+						Vilken del av kursmaterialet (böcker, artiklar, videor, etc)
+						uppskattade du mest, använde du dem alla?
+					</li>
+				</ol>
+
+				<hr />
+				<h3>Svar:</h3>
+				<ol>
+					<li>Variable är som en plats i memory att spara data i den</li>
+					<li>
+						WSL (Windows subsystem for linux) med debian. Använder vscode som
+						code editor
+					</li>
+					<li>Har läst JavaScript och PHP</li>
+					<li>Bara några enkla kommand i terminalen</li>
+					<li>Det var lite krånglig att gå labmiljön fungera i WSL</li>
+					<li>Alla material var till hjälp</li>
+				</ol>
+			</section>
+
+			<!-- Redovisningstext för kmom -->
+			<section>
+				<h2>Kmom02</h2>
+				<p>
+					1- Hur känns syntaxen i Python?<br />
+					Det är OK, finns många inbyggda funktioner som är både bra och dålig
+					om man vill lär sig programmering.
+					<br /><br />
+				</p>
+				<p>
+					2- Är det enkelt att se programmets struktur och vad det gör?<br />
+					ja, hittils som vi skriver enkla program, känns det som att läsa en
+					text på engelska. Det finns många liksom "and" (&&),"is" (==), "is
+					not" (!=), "reverse", "for x in range()" och många mer keywords och
+					inbyggda funktioner.<br /><br />
+				</p>
+				<p>
+					3- Har du fått en förståelse för hur loopar och villkor fungerar?<br />
+					ja, while loop och for loop är enkel i python. liksom
+				</p>
+<pre>
+
+for x in range(0,6):
+print(x)
+
+# och 
+
+x = 0 
+while x &lt; 6: 
+print(x)
+x += 1
+
+</pre>
+				<p>
+					4- Vad är skillnaden på en while-loop och en for-loop?<br />
+					while loop är som en if-statement och man måste inkrementera i loop
+					och den fortsätter så länge det är true<br /><br />
+					men for loop, gör inkrementeringen. <br /><br />
+				</p>
+				<p>
+					5- Hur går det med valideringen av uppgifterna?<br />
+					det går bra. Fick ett fel i pylinter för unnecessary elif after break
+					som behöver fixas i pylint setting. raderade alla break och istället
+					inkrementerade loop counter till max.
+					<br /><br />
+				</p>
+				<p>
+					6- Är du överens med pylint om eventuella felmeddelanden vid
+					valideringen?<br />
+					Det är bra att fixa de små fel så den hjälper att koden blir
+					bättre.<br /><br />
+				</p>
+				<p>
+					7- Hur gick det att utföra uppgifterna, var de enkla eller svåra?<br />
+					Det var lagom. förutom uppgift 4.2 i lab2. <br /><br />
+				</p>
+				<p>
+					8- Gjorde du någon av extrauppgifterna? Berätta om det arbetet
+					isåfall.<br />
+					Bara A1 och A4. A1 var lik uppgift meny7. Använde while loop och
+					kontrollerat om varje character av andra ord finns i det första ordet
+					med hjälp av "word in string". <br />
+					A4 var enkel men den var roligaste uppgiften jag gjort och jag var
+					nyfiken och intresserad av att få den fungera.
+				</p>
+			</section>
+
+			<!-- Redovisningstext för kmom -->
+			<section>
+				<h2>Kmom03</h2>
+				<p>
+					1) Vad är en lista?<br />
+					En lista är en lista av variablar som är separarerade med en komma
+					inne i en bracket liksom: minList = [1, 'a', 'apple', 4]
+				</p>
+				<p>
+					2) Vad är slicing?<br />
+          man kan ändra/välja en slice av list. den har en start och en slut index.
+        </p>
+<pre>
+
+minList = [1, 'a', 'apple', 4]
+print(minList[1:3])
+
+</pre>
+				<p>
+					3) Var det svårt att bekanta sig med datastrukturen för listor eller
+					flöt det på bra?<br />
+					det var bra och inte svårt att förstå.
+				</p>
+				<p>
+					4) Har du jobbat med listor, eller arrayer, i andra
+					programmeringsspråk?<br />
+					ja, i JavaScript och PHP. det finns mycket likheter mellan de språk eftersom allt räknas c-like språk.
+				</p>
+				<p>
+					5) Kan du i så fall jämföra Python listor mot andra
+					programmeringsspråk?<br />
+					Hittils verkar att array i javascript och list i python är det samma.
+					Man kan spara olika typ av variablar i en list. och det finns inbyggda
+					funktioner för att modifierar list och array i båda språk, liksom
+					pop().
+				</p>
+				<p>
+					6) Om du gjorde uppgiften del 2 i listövningen, varför behöver man
+					göra bytet i den specifika ordningen?<br />
+        </p>
+				<p>
+					7) Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken
+					var mest lärorik när det gäller listor?<br />
+					Uppgift 3-1. Jag lärt mig att "for in" loop skapar en kopia av list
+					och refererar inte till list. Så det går inte att uppdatera/modifiera
+          list variables med for in loop.<br>
+          och sen Marvin2 var bra och fick mig att tänka mer men det gick bra ändå och jag körde några tester och får rätt svar. inv + swap, pick, pick med index och drop fungerar som de ska. 
+				</p>
+			</section>
+
+			<!-- Redovisningstext för kmom -->
+			<section>
+				<h2>Kmom04</h2>
+				<p>Här är redovisningstexten for kmom04</p>
+				<p>
+					1) Har du programmerat med funktioner tidigare? <br>
+					ja, programmerat med funktioner i javascript och php. I grunden är funktion det samma i alla programmering språk. 
+					Man kan skapa och anropa funktion vid behöv. 
+				</p>
+				<p>
+					2) Hur kan du använda funktioner när du programmerar? <br>
+					Man kan skapa en funktion med "def" i python och följer det med ett namn och "()" och ":" <br>
+					man skriver alla kod och funktionalitet under det och kan antingen skriva ut ett resultat eller returnera det.
+					Det går att anropa funktion i nästan overall även inside en annan funktion.
+				</p>
+				<p>
+					3) Du har gjort din första modul i Python, känns strukturen bra?<br>
+					ja, det var straight forward så att man skapar en python fil och skrivar sina funktioner i det och sedan importerar denna funktions sidan i 
+					annan python fil och anropar funktionerna med "fil-namn.funktion-namn()".
+				</p>
+				<p>
+					4) Hur kan du använda moduler?<br>
+					genom att importera den först och sedan anropa funktionerna där de behövs.
+				</p>
+
+				<p>
+					5) Vad tyckte du om de olika uppgifterna?<br>
+					de var intressant och handlade om olika delar av programmering, såsom list, filter, convertera str to int eller list to str, att 
+					separera en str med delimeter och mycket mer vilken var bar.
+				</p>
+				<p>
+					6) Hur tänkte du när du utförde dem? <br>
+					började först med att dela upp uppgiften i olika delar och sedan skriva koden. i detta fall: 
+				</p>
+				<script src="https://gist.github.com/rez433/f2ef4e5593f8458d77a51b104d99a385.js"></script>
+				<p>
+					7) Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall?<br>
+					ingen. 
+				</p>
+
+			</section>
+
+			<!-- Redovisningstext för kmom -->
+			<section>
+				<h2>Kmom05</h2>
+				<p>
+					1) Känns det som du fick ordning på listor, dictionaries och tupler, när man skall använda respektive och hur de kan användas? <br>
+					list är en lista av variablar som kan vara av olika data-types och kan även finnas flera examplar av samma variable. och en list kan innehålla andra lsit. <br>
+					dictionaries är associated arrays som sparas som key och value.man kan spara list eller tuple som value. <br>
+					tuple är liksom en list men mutable och kan inte ändras när de skapas. och kan inte innehålla kopior av samma variable. 
+				</p>
+				<p>
+					2) Vad skiljer de tre datastrukturerna från varandra? <br>
+					list använder bracket. kan innehålla flera kopior av samma variable. kan innehålla andra list. list är mutable och det går att ändra list variables. det går att indexera list. <br>
+					tuple använder pratheses. är immutable och det går ej att ändra tuple variables. kan inte innehålla flera kopior av samma variable. <br>
+					dictionary använder curly brackets. sparar data som key,value. kan innehålla båda list och tuple som value. och tuple som key också. dictionary är mutable och kan ändra dictionary variables. 
+				</p>
+				<p>
+					3) Hur använde du dem i uppgifterna? <br>
+
+				</p>
+				<p>
+					4) Gjorde du någon av extrauppgifterna? Berätta om det arbetet i så fall. <br>
+					nej, det var stort kursmoment och det tog mer tid än andra uppgifterna. 
+				</p>
+				<p>
+					5) Vad tyckte du om emission uppgiften? <br>
+					bra, man skriver många functioner och kan anropa de från inne av annat funktion. det finns mycket variable-check så att en key har value eller vilket år användare söker efter. eller om användare har anget antal länder. 
+				</p>
+<pre>
+
+sort_em = sorted(eData.emission_1990.items(), key=lambda x: x[1], reverse=True)
+if landNum == 0 and cap == 0:
+	for x in sort_em:
+		print(land[x[0]], ':', x[1])
+elif landNum &gt; 0 and cap == 0:
+	while i &lt; landNum:
+		print(land[sort_em[i][0]], ':', sort_em[i][1])
+		i += 1
+elif landNum == 0 and cap &gt; 0:
+	for x in eData.emission_1990.items():
+		ind = x[0]
+		co2 = x[1]
+		if len(capita[ind]) &gt; 0:
+			sort_em_1[land[ind]] = (co2 * 1000000) / capita[ind][cap - 1]
+		else:
+			sort_em_1[land[ind]] = 0.0
+	sorted_cap = []
+	sorted_cap = sorted(sort_em_1.items(), key=lambda x: x[1], reverse=True)
+	for lanCap in sorted_cap:
+		print(lanCap[0], ': ', lanCap[1])
+
+</pre>
+
+
+			</section>
+
+			<!-- Redovisningstext för kmom -->
+			<section>
+				<h2>Kmom06</h2>
+				<p>
+					1) Hur jobbar man med filer i Python? <br>
+					man börjar med att öppna filen genom att ange path to the file, rekkomenderad att användas "with open(filepath, 'r') as f"
+					då den stänger filen efter den är klar och lämnar inte det öppet.<br>
+					sedan kan man börja läsa antingen hela filen eller gör en lista av alla rader. <br>
+					"f.readlines()" <br>
+					om man vill skriva då används "with open(filepath, 'r+') as wf" eller "with open(filepath, 'w') as wf" <br>
+					och man kan skriva i filen: <br>
+					wf.write('text')
+				
+				</p>
+				<p>
+					2) Vilka fördelar ger det att kunna läsa från och skriva till filer?<br>
+					man kan spara filer och ändrigar och de finns kvar även när man stänger programmet. Det går att använda den nästan som en enkel databas för att skriva, uppdatarer och spara data i den,
+				</p>
+				<p>
+					3) Hur gick det att utföra uppgifterna? <br>
+					det gick bra, förutom en kmom06 - 1-4 som jag hade problem med. Jag fick rätt svar som matchade hint men var inte rätt av någon anlending.
+
+				</p>
+				<p>
+					4) Hur gick det med att rätta analyzer uppgiften med rättningsverktyget?<br>
+					Jag fick lite problem med inspect men det löste sig i slutänden när jag skrev main.py från början.  
+				</p>
+
+			</section>
+
+			<!-- Redovisningstext för kmom10 -->
+			<section>
+				<h2>Kmom07-10</h2>
+				<h3 class="krav">krav 1-3</h3>
+                <p>I projektet "type training" har implementerats 5 krav. krave 1-3 handlar det om först visa ett meny till user med 5 val:</p>
+                <ul>
+                    <li>1) train easy</li>
+                    <li>2) train medium</li>
+                    <li>3) train hard</li>
+                    <li>4) display highscores list</li>
+                    <li>q) exit</li>
+                </ul>
+                <p>sedan om user väljer alternativ 1-3 så visas en text och frågar user att skriva textet. Och varje alternaivt 1-3 har predefined text filer som har respektiva svårigheter. alternative 4 visar en lista av score vilka de användarna har valt att registrera sin score. Listan ska visas på så sätt att de sorteras efter svårighetsgrad och sedan från högt till lågt score.</p>
+                <p>Alternativ q) avslutar programmet.</p>
+                <h4>genomgång av projektet</h4>
+                <p>
+                    projektet är uppdelad i 4 delar:
+                    <ul>
+                        <li>main.py</li>
+                        <li>menu.py</li>
+                        <li>func.py</li>
+                        <li>src folder</li>
+                    </ul>
+                    I första steget skapas en "src" folder där alla 3 txt filar sparas. sedan main.py som är ingång till programmet importerar func.py och menu.py. Sedan visas menyn och när user väljer ett alternativ anropas ett funktion från func.py. 
+                    Anledningen att koden är delat på så sätt är att programmet blir modulärt och varken menu.py eller func.py vet inget om det andra existerar. Allt händer i main.py. 
+                </p>
+                <p>
+                    <span class="red">problem:</span> vad händer om user skriver ett bokstav/nummer som inte finns i menyvalet?
+                    <br>
+                    <span class="green">lösning:</span> Eftersom main är en "while" loop då det enda behövs är det att printa ut att user behöver välja ett utav de meny alternativen. och sedan menyvalet visas igen.
+                </p>
+<pre>
+# main
+def main():
+	""" choice handling """
+	choice = menu.menu()
+	if choice == "1":
+	func.easy()
+
+	if choice == "2":
+	func.medium()
+
+	if choice == "3":
+	func.hard()
+
+	if choice == "4":
+	func.show_top_scores()
+
+	elif choice == "q":
+	func.quit_test()
+	exit()
+
+	else:
+	func.not_valid()
+
+if __name__ == "__main__":
+while (True):
+main()
+
+</pre>
+<br>
+<pre>
+
+#func 
+
+def not_valid():
+    print("Please choose one of the options!")
+
+</pre>
+                <p>
+                    här implementerades krav 4 vilken registrerar tiden.
+                    i func.py finns en funktion med namn "compTxt" som först öppnar txt fil som matchar users val. sedan loopar igenom varje rad och :
+                    <ul>
+                        <li>visar en rad till user</li>
+                        <li>startar tiden</li>
+                        <li>tar input från user</li>
+                        <li>stoppar tiden</li>
+                        <li>räknar tiden och inkrementerar totTime varjabeln.</li>
+                        <li>loppar igenom varje ord och sedan kontrollerar varje character för att hitta skillnaden mellan original text och users text. Sedan sparas alla fel i char_fails dictionary.</li>
+                    </ul>
+                    dessa steg repeteras för varje rad och när user är klar med testet, visas score, fel-percentile, och character som var fel och dess antal gånger.
+                    <br>
+                    efter det programmet frågar user för username och registreras det i score.txt filen.
+                </p>
+                <p>
+                    <span class="red">problem:</span> hur man loopar igenom rader i en text fil? hur man hanterar "new line" i text.
+                    <br>
+                    <span class="green">lösning:</span> Man öppnar testen och sedan används (readlines) vilken returnerar alla rader separerade i en list. sedan loopas igenom listan och man ersätter "\n" med "".
+                </p>
+                <pre>
+with open(FILE_LIST[file_index], "r") as f:
+	for line in f:
+		if line != '\n':
+			line = line.strip()
+			line2 = []
+			for word in line.split():
+				word = list(word)
+				line2.append(word)
+			test_lines.append(line2)
+			orig_lines.append(line)
+
+                </pre>
+
+                <h3 class="krav">Krav 4</h3>
+                
+                <p>
+                    <span class="red">problem:</span> hur registrerar man tiden för alla user input?
+                    <br>
+                    <span class="green">lösning:</span> python har inge inbyggt method för time, därför importeras modulen "time". och sedan input wraps mellan start och end tiden. och sedan räknas skillnaden mellan start och end ochsparas i totTime. Eftersom vi loopar igenom varje rad får vi summan av tiden för alla rader.
+                </p>
+				<p>
+					Här även konverteras string till list så att det blir en lista av rader vilken innehåller en lista av ord, vilken i sin tur innehåller en lista av bokstav.
+				</p>
+<pre>
+
+totTime = 0
+
+for line in orig_lines:
+	print("\033[0;32m\n", line, "\033[0m")
+	start_time = time.time()
+	
+	user_line = input("-")
+	line2 = []
+	for word in user_line.split():
+		line2.append(list(word))
+		user_lines.append(line2)
+	
+	end_time = time.time()
+	
+	total_time += (end_time - start_time)
+
+</pre>
+
+                <br>
+				<hr>
+                <p>
+                    <span class="red">problem:</span> Hur jämförs två rader för att hitta skillnaden?
+                    <br>
+					När jämförs två rader for att hitta skillnaden, finns det bara 3 möjlighet:
+					<ul>
+						<li>user skriver mindre ord i ett rad än test rad</li>
+						<li>user skriver mer ord i ett rad på test rad</li>
+						<li>user skriver samma mängd ord i ett rad som test rad</li>
+					</ul>
+
+					Och sedan när jämförs två order, då finns igen bara 3 möjligheter:
+					<ul>
+						<li>user skriver mindre bokstäver i ett ord än test ord</li>
+						<li>user skriver mer bokstäver i ett ord än test rad</li>
+						<li>user skriver samma mängd bokstäver i ett rad som test rad</li>
+					</ul>
+                </p>
+
+				<h3 class="krav">compare_lines function</h3>
+				<p>
+					Därför skapades "compare_lines" att jämföra rader och göra de samma längd, om user skrivit mer ord i rad, då för varje
+					ord läggas 1 mer fel i mistakes_counter. och sedan genom en loop, raders de extra ord med .pop()
+
+					<br>
+					Och om user skriver mindre ord i ett rad då genom en loop, raderas de ORD SOM INTE FINNS I test_lines med .pop() och sedan med en till loop skicaks varje bokstav i ordet till add_to_char_fails_dict.
+
+					<br>
+					Och sedan har vi en lista av rad som är samma längd och skickas till compare_words för att göra alla ord samma längd.
+				</p>
+
+				<h3 class="krav">compare_words function</h3>
+				<p>
+					"compare_words" jämför order och gör de samma längd, om user skrivit mer bokstav i ord, genom en loop kommer raders de extra bokstäver med .pop()
+				
+					<br>
+					Och om user skriver mindre bokstäver i ett ord då genom en loop, raderas de BOKSTÄVER SOM INTE FINNS I test_words med .pop() och sedan skicaks varje bokstav till add_to_char_fails_dict.
+				
+					<br>
+					Nu har vi en lista av ord som är samma längd och skickas till compare_chars för att jämföras.
+				</p>
+
+				<h3 class="krav">compare_chars function</h3>
+				<p>
+					"compare_chars" checkar om bokstäver är inte lika och skickar de till add_to_char_fails_dict.
+				</p>
+
+<pre>
+
+def compare_strings(file_index):
+	# entren till function att starta testet
+
+	# vilken tar emot user input och test lines som skickar vidare till compare_lines
+	# compare_lines skickar tillbaka char_fails_dict, mistakes_counter som i sin tur skickas till score function och display_result function
+
+	char_fails_dict, mistakes_counter = compare_lines(test_lines, user_lines)
+
+
+def compare_lines(test_lines, user_lines):
+	# tar emot två lista av rad och gör user rader samma längd som test rader
+
+def compare_words(test_words, user_words, char_fails_dict, mistakes_counter):
+	# tar emot två lista av ord och gör user ord samma längd som test ord
+
+
+def compare_chars(test_chars, user_chars, char_fails_dict, mistakes_counter):
+	# jämförar två ord för att hitta skillnaden och skickar skillnaden till add_to_char_fails_dict för att sparas i dictionary
+
+</pre>
+
+
+			<br>
+			<hr>
+			<h3>add_to_char_fails_dict function</h3>
+			<p>
+				add_to_char_fails_dict, checkar om bokstaven finns redan i dictionary:
+			<ul>
+				<li>Om bokstaven inte finns i dictionary, la till bokstaven i dictionary och lägg 1 i value</li>
+				<li>Om bokstaven finns i dictionary, adderar 1 till value i dictionary</li>
+			</ul>
+			</p>
+<pre>
+def add_to_char_fails_dict(char_fails_dict, char, mistakes_counter):
+	mistakes_counter["fails"] += 1
+	if char not in char_fails_dict:
+		char_fails_dict[char] = 1
+	else:
+		char_fails_dict[char] += 1
+</pre>
+			<br>
+			<hr>
+			<h3>registr function</h3>
+			<p>
+				När user är klar med testet då händer två saker:
+				<ul>
+					<li>visas resultatet</li>
+					<li>frågar user om man namn som registrerar score i score listan.</li>
+				</ul>
+
+				Om user registrar sitt score då sparas den i en txt fil bland andra scores. Den kommer att spara 3 variablar i en dictionary. namn, score, nivå.
+			</p>
+
+			<br>
+			<hr>
+			<h3>show_top_scores function</h3>
+			<p>
+				funktionen kommer att först skapa en tum lista "unsorted_scores". Sedan öppnar den och läser "score.txt" filen och sparar varje i en lista osh sedan läggar till varje lista till unsorted_scores.
+			</p>
+			<p>
+				Sedan med hjälp av lambda kommer den sortera listan efter score vilket är den andra varjabeln i varje list. 
+			</p>
+			<p>
+				Sedan kommer den filtera listan efter level vilket är den tredje varjabeln i varje list.
+			</p>
+
+<pre class="finalcode">
+
+def show_top_scores():
+	"""Show top scores"""
+	unsorted_scores = []
+
+	with open('./src/score.txt', 'r') as f:
+		for line in f:
+			line = line.strip()
+			if not line:
+				continue
+			username, score, level = line.split()
+			try:
+				score = float(score)
+			except ValueError:
+				continue
+			unsorted_scores.append((username, score, level))
+
+	sorted_scores = sorted(unsorted_scores, key=lambda x: x[1], reverse=True)
+
+	easy_scores = []
+	medium_scores = []
+	hard_scores = []
+
+	for username, score, level in sorted_scores:
+		if level == "easy":
+			easy_scores.append((username, score))
+		elif level == "medium":
+			medium_scores.append((username, score))
+		elif level == "hard":
+			hard_scores.append((username, score))
+</pre>
+                <br>
+                <br>
+                <hr>
+                <h3>Om Kursen</h3>
+                <p>
+                    Jag läste kursen ht20 och nu det är bara projektet som lämnas in. Kursen hade väldigt högt kvalitet och krav. Varje inlämningsupgift var intressant och lärorik. Jag tyckte Marvin och analys uppgiften var väldigt bra att en lär sig hur man gör en interaktiv program och tänker på även felhantering. och sedan sista projektet "typing test" var det bästa man kunde avsluta kursen med. Projektet verkade lätt att det enda det gör är att visar en meny sedan loppar igenom rader i en text fil, tar user input och hittar skillnaden mellan två string. men funktionen att jämföra texterna var kloriga än vad jag hade tänkt mig. Jag skrev och testat denna funktion flera gånger tills jag fixade det. Jag har inga förslag för att förbättra kursen eftersom den är redan på top nivå och har hög kvalitet. Jag är super nöjd med kursn och den får lätt 10 av 10.
+
+                </p>
+                <br>
+                <br>
+
+			</section>
+		</article>
+        <footer>
+            <div>
+                @rere20
+            </div>
+        </footer>
+	</body>
+</html>

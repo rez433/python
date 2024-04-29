@@ -1,0 +1,77 @@
+body {
+    margin: 8px auto;
+    color: #333;
+    max-width: 600px;
+    overflow-y: scroll;
+    background-color: #1d2a35;
+	color: #ddd;
+    font-size: 1.2rem;
+}
+
+h1 {
+    border-bottom: 1px solid #666;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: limegreen;
+}
+
+code, pre {
+	background-color: #15171b;
+	color: #e9e9e9;
+	border-style: none;
+    white-space: pre-wrap;
+
+}
+
+.final {
+    border: 1px solid limegreen;
+    padding: 1rem;
+}
+
+.finalist {
+    border: 1px solid limegreen;
+    border-top: none;
+    margin: 1rem;
+
+}
+
+.finalast {
+    border: 1px solid limegreen;
+    border-bottom: none;
+    padding: 1rem;
+
+}
+
+.finalcode {
+    border: 1px solid limegreen;
+
+}
+
+.krav {
+    text-align: center;
+    border: 1px solid lime;
+    width: 100%;
+    padding: 1rem;
+    border-left: none;
+    border-right: none;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bred {
+    background-color: darkred;
+}
