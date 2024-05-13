@@ -1,5 +1,4 @@
-# pylint: disable = consider-using-enumerate, cell-var-from-loop, snake_case
-
+# pylint: disable = consider-using-enumerate, cell-var-from-loop, snake_case, invalid-name
 """
 func.py: All functions needed for the Type Test
 """
@@ -81,15 +80,20 @@ def compare_strings(file_index):
     test_lines = []
     user_lines = []
     total_time = 0
+    orig_char_count = 0
+    orig_wrd_count = 0
+    user_wrd_count = 0
 
     # Open original text file
     with open(FILE_LIST[file_index], "r") as fil:
         for line in fil:
             if line != '\n':
                 line = line.strip()
+                orig_char_count += len(line)
                 line2 = []
                 for word in line.split():
                     word = list(word)
+                    orig_wrd_count += len(word)
                     line2.append(word)
                 test_lines.append(line2)
                 orig_lines.append(line)
@@ -102,37 +106,45 @@ def compare_strings(file_index):
         line2 = []
         for word in user_line.split():
             line2.append(list(word))
+        user_wrd_count += len(line2)
         user_lines.append(line2)
 
         end_time = time.time()
 
         total_time += (end_time - start_time)
 
+    # Compare lines to find differences
     char_fails_dict, mistakes_counter = compare_lines(test_lines, user_lines)
 
-    score, error_percentage = calc_score(mistakes_counter, len(orig_lines), total_time)
+    # Calculate score which returns score, error percentage and words per minute
+    score, error_percentage, wpm = calc_score(mistakes_counter, orig_char_count, total_time, user_wrd_count)
 
-    display_results(mistakes_counter, score, error_percentage, char_fails_dict)
+    # Display results
+    display_results(mistakes_counter, score, error_percentage, char_fails_dict, wpm)
 
-    username = input('Enter username to add to highscore list (optional): ')
+    # Ask user for username to add score to high score list
+    username = input('Enter username to add to highscore list (optional, press enter to skip): ')
     if username:
         test_type = FILE_LIST[file_index].split('/')[-1].replace('.txt', '')
         registr(username, score, test_type)
 
 
 
-def display_results(mistakes_counter, score, error_percentage, char_fails_dict):
+# Function to display results
+def display_results(mistakes_counter, score, error_percentage, char_fails_dict, wpm):
     """Display results"""
     print("\n")
     print("\033[0;32mScore: \t\t\t", score, "\033[0m")
     print("\033[0;32mError percentage: \t", error_percentage, "\033[0m")
     print("\033[0;32mMistakes: \t\t", mistakes_counter["fails"], "\033[0m")
+    print("\033[0;32mWords per minute: \t", wpm, "\033[0m")
     print("\n")
     print("\033[0;32mChar fails: \033[0m")
     for char, count in char_fails_dict.items():
         print("\t", char, ": ", count)
 
 
+# Function to compare lines
 def compare_lines(test_lines, user_lines):
     """Compare lines to find differences"""
     mistakes_counter = {"fails": 0}
@@ -176,7 +188,7 @@ def compare_lines(test_lines, user_lines):
     return char_fails_dict, mistakes_counter
     
 
-
+# Function to compare words
 def compare_words(test_words, user_words, char_fails_dict, mistakes_counter):
     """Compare words to find differences"""
     test_chars = []
@@ -217,6 +229,7 @@ def compare_words(test_words, user_words, char_fails_dict, mistakes_counter):
     compare_chars(test_chars, user_chars, char_fails_dict, mistakes_counter)
 
 
+# Function to compare characters
 def compare_chars(test_chars, user_chars, char_fails_dict, mistakes_counter):
     """Compare characters to find differences"""
     for i in range(len(test_chars)):
@@ -225,6 +238,9 @@ def compare_chars(test_chars, user_chars, char_fails_dict, mistakes_counter):
                 add_to_char_fails_dict(char_fails_dict, test_chars[i][j], mistakes_counter)
 
 
+
+
+# Function to add wrong characters to dictionary
 def add_to_char_fails_dict(char_fails_dict, char, mistakes_counter):
     """Add missing or wrong characters to dictionary"""
     mistakes_counter["fails"] += 1
@@ -234,16 +250,20 @@ def add_to_char_fails_dict(char_fails_dict, char, mistakes_counter):
         char_fails_dict[char] += 1
 
 
-def calc_score(mistakes_counter, orig_lines_len, total_time):
+
+# function to calculate score
+def calc_score(mistakes_counter, orig_lines_len, total_time, user_wrd_count):
     """ calculating score """
     err_pe = 100 * (mistakes_counter["fails"] / orig_lines_len)
     scor = (orig_lines_len * (100 - err_pe)) / total_time
     score = round(scor, 2)
     err_per = round(err_pe, 2)
-    return score, err_per
+    totMins = total_time / 60
+    wpm = round(user_wrd_count / totMins , 2)
+    return score, err_per, wpm
 
 
-
+# function to register top score
 def registr(username, score, test_type):
     """ register top score after test """
     fil = open('./src/score.txt', 'a')
